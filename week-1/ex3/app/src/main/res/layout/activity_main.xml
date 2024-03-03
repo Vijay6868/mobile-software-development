@@ -66,4 +66,13 @@
         android:layout_marginTop="60px"
         />
 
+    <EditText
+        android:id="@+id/tbResult"
+        android:layout_width="118dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="300px"
+        android:layout_marginTop="400px"
+        android:ems="10"
+        android:inputType="number" />
+
 </RelativeLayout>
