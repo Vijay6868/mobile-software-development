@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/tbUserName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="text"
+        android:text="Username"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="42dp"
+        android:layout_below="@id/lbUsername"
+        android:layout_marginLeft="20px"/>
+
+    <TextView
+        android:id="@+id/lbUsername"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Username"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="16dp"
+        android:layout_marginTop="30px"
+        android:layout_marginLeft="20px"/>
+
+    <TextView
+        android:id="@+id/lbPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Password"
+        tools:layout_editor_absoluteX="17dp"
+        tools:layout_editor_absoluteY="99dp"
+        android:layout_below="@id/tbUserName"
+        android:layout_marginLeft="20px"/>
+
+    <EditText
+        android:id="@+id/tbPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="text"
+        android:text="Password"
+        tools:layout_editor_absoluteX="17dp"
+        tools:layout_editor_absoluteY="134dp"
+        android:layout_below="@id/lbPassword"
+        android:layout_marginLeft="20px"/>
+
+    <Button
+        android:id="@+id/btLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Login"
+        android:layout_below="@id/tbPassword"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="50px"/>
+
+    <Button
+        android:id="@+id/btRegister"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Register"
+        android:layout_below="@id/btLogin"
+        android:layout_centerInParent="true"/>
+
+    <Button
+        android:id="@+id/btCancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cancel"
+        android:layout_below="@id/btRegister"
+        android:layout_centerInParent="true"/>
+
+</RelativeLayout>
