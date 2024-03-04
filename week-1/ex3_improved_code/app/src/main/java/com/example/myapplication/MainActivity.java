@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -37,11 +38,12 @@ public class MainActivity extends AppCompatActivity {
                 value3 = value1 * value2;
                 break;
             default:
-                // Handle invalid operator here if necessary
+
                 return;
         }
 
         result.setText(String.valueOf(value3));
+
     }
 
     public void onBtnPlus(View view) {
