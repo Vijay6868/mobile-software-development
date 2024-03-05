@@ -15,12 +15,14 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        mediaPlayer = MediaPlayer.create(this, );
+        mediaPlayer = MediaPlayer.create(this,R.raw.sample );
+        //mediaPlayer.start();
     }
     public void playAudio(View view){
         if(!mediaPlayer.isPlaying()){
             mediaPlayer.start();
         }
+
     }
     public void pauseAudio(View view){
         if(mediaPlayer.isPlaying()){
