@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<!-- home_screen strings -->
+
+	<string name="app_name">Page 1</string>
+	<string name="ek_img_content">ExportKit Image</string>
+	<string name="kids_arithmetic_game_string">Kids Arithmetic Game</string>
+	<string name="enter_your_name_string">Enter your Name</string>
+	<string name="year_string">Year</string>
+	<string name="operator_string">Operator </string>
+	<string name="start_game_string">Start Game</string>
+</resources>
