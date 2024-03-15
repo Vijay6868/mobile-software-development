@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<!-- home_screen strings -->
+
+	<string name="app_name">Deal App</string>
+	<string name="ek_img_content">ExportKit Image</string>
+	<string name="pure_milford_sound_cruise_string">Whale Watch Kaikoura</string>
+	<string name="tap_for_more_details_string">Tap for more details</string>
+	<string name="__99_string">$165</string>
+	<string name="pure_milford_sound_cruise_ek1_string">Pure Milford Sound Cruise</string>
+	<string name="tap_for_more_details_ek1_string">Tap for more details</string>
+	<string name="__99_ek1_string">$99</string>
+	<string name="featured_string">Featured</string>
+	<string name="categories_string">Categories</string>
+</resources>
