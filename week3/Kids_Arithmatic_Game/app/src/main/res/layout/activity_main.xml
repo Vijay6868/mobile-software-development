@@ -12,13 +12,13 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="70dp"
         android:layout_marginEnd="36dp"
-        android:layout_marginBottom="71dp"
+        android:layout_marginBottom="194dp"
         android:lineSpacingExtra="14sp"
         android:text="Kids Arithmatic Game"
         android:textColor="#0A1F73"
         android:textSize="34sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/tbName"
+        app:layout_constraintBottom_toTopOf="@+id/opDropdown"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -55,9 +55,20 @@
         android:layout_marginStart="136dp"
         android:layout_marginBottom="266dp"
         android:text="Button"
-        android:theme="@style/Button.White"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextNumber"
-        />
+        app:layout_constraintTop_toBottomOf="@+id/editTextNumber" />
+
+
+    <Spinner
+        android:id="@+id/opDropdown"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="41dp"
+        android:layout_marginEnd="39dp"
+        android:layout_marginBottom="377dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/tbName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lbTitle" />
 </androidx.constraintlayout.widget.ConstraintLayout>
