@@ -20,7 +20,9 @@ import java.util.ArrayList;
 public class MainActivity extends AppCompatActivity {
     String selectedItem;
     String operation;
-    public static final String MSG = "com.example.kids_arithmatic_game.GAME_PLAY";
+    public static final String MSG = "com.example.kids_arithmatic_game.PL_NAME";
+    public static final String AGE = "com.example.kids_arithmatic_game.PL_AGE";
+    public static final String OP = "com.example.kids_arithmatic_game.OP";
 
 
     @Override
@@ -29,6 +31,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
        dropDownItem();
+
     }
 
     // returns selected item in the dropDown, that is operation, +,- or X
@@ -45,7 +48,7 @@ public class MainActivity extends AppCompatActivity {
         dropdown.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                //Toast.makeText(MainActivity.this, items.get(position), Toast.LENGTH_SHORT).show();
+                Toast.makeText(MainActivity.this, items.get(position), Toast.LENGTH_SHORT).show();
                 selectedItem = items.get(position);
             }
 
@@ -57,23 +60,21 @@ public class MainActivity extends AppCompatActivity {
         return selectedItem;
     }
     // handling game start button
-    public void start(View view){
+    public void startGame(View view){
         Intent intent = new Intent(this, gamePlay.class);
         EditText txtName = findViewById(R.id.tbName);
         EditText txtAge = findViewById(R.id.tb_Age);
-        operation = dropDownItem();
+        operation = selectedItem;
 
         String name = txtName.getText().toString();
+        //Toast.makeText(this, name, Toast.LENGTH_SHORT).show();
         String age = txtAge.getText().toString();
 
-        ArrayList <String> playerDetails = new ArrayList<>();
 
-        playerDetails.add(name);
-        playerDetails.add(age);
-        playerDetails.add(operation);
+        intent.putExtra(MSG,name);
+        intent.putExtra(AGE,age);
+        intent.putExtra(OP,operation);
 
-        intent
-
-
+        startActivity(intent);
     }
 }
