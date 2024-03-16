@@ -29,7 +29,7 @@
         android:ems="10"
         android:hint="Name"
         android:inputType="text"
-        android:text=""
+        android:text="Enzo"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -42,6 +42,7 @@
         android:ems="10"
         android:hint="Age"
         android:inputType="number"
+        android:text="3"
         app:layout_constraintStart_toStartOf="@+id/tbName"
         app:layout_constraintTop_toBottomOf="@+id/tbName" />
 
