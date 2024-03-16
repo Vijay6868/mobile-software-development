@@ -17,13 +17,15 @@ public class gamePlay extends AppCompatActivity {
         String name = intent.getStringExtra(MainActivity.MSG);
         String operator = intent.getStringExtra(MainActivity.OP);
         String age = intent.getStringExtra(MainActivity.AGE);
-
+        int pAge = Integer.parseInt(age);
         TextView tv_name = findViewById(R.id.lbPlayerName);
         TextView tv_operator = findViewById(R.id.tvOp);
 
         tv_name.setText(name);
         tv_operator.setText(operator);
 
+
+        gameStart(pAge,operator);
     }
     //determining number limit according to the age.
     public int deterNumLim(int age){
@@ -47,5 +49,17 @@ public class gamePlay extends AppCompatActivity {
         Random rand = new Random();
         int num = rand.nextInt(limit);
         return num;
+    }
+    public void gameStart(int age, String op){
+
+        for(int i=0; i<6;i++){
+            int val1 = genRandomNum(deterNumLim(age));
+            int val2 = genRandomNum(deterNumLim(age));
+            TextView value1 = findViewById(R.id.tbValue1);
+            TextView value2 = findViewById(R.id.tbValue2);
+            value1.setText(String.valueOf(val1));
+            value2.setText(String.valueOf(val2));
+        }
+
     }
 }
