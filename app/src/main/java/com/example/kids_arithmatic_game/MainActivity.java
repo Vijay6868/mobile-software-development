@@ -5,10 +5,13 @@ import static android.app.ProgressDialog.show;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.compose.ui.state.ToggleableState;
 
+import android.content.Intent;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
 
@@ -16,7 +19,8 @@ import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
     String selectedItem;
-    String Operation;
+    String operation;
+    public static final String MSG = "com.example.kids_arithmatic_game.GAME_PLAY";
 
 
     @Override
@@ -51,6 +55,25 @@ public class MainActivity extends AppCompatActivity {
             }
         });
         return selectedItem;
+    }
+    // handling game start button
+    public void start(View view){
+        Intent intent = new Intent(this, gamePlay.class);
+        EditText txtName = findViewById(R.id.tbName);
+        EditText txtAge = findViewById(R.id.tb_Age);
+        operation = dropDownItem();
+
+        String name = txtName.getText().toString();
+        String age = txtAge.getText().toString();
+
+        ArrayList <String> playerDetails = new ArrayList<>();
+
+        playerDetails.add(name);
+        playerDetails.add(age);
+        playerDetails.add(operation);
+
+        intent
+
 
     }
 }
