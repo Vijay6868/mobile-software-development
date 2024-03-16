@@ -10,6 +10,7 @@
         android:id="@+id/lbPlayerName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:text="Name"
         android:textSize="34sp"
         tools:layout_editor_absoluteX="18dp"
         tools:layout_editor_absoluteY="40dp" />
