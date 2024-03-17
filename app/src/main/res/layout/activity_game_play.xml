@@ -13,7 +13,7 @@
         android:layout_marginStart="20dp"
         android:layout_marginTop="63dp"
         android:text="Name"
-        android:textSize="24sp"
+        android:textSize="34sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -21,25 +21,13 @@
         android:id="@+id/lbValue1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginEnd="33dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="34dp"
         android:text="v1"
         android:textSize="20sp"
         app:layout_constraintBaseline_toBaselineOf="@+id/lbOp"
         app:layout_constraintEnd_toStartOf="@+id/lbOp"
         app:layout_constraintStart_toStartOf="parent" />
-
-    <TextView
-        android:id="@+id/lbOp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="187dp"
-        android:layout_marginEnd="45dp"
-        android:text="+?"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toStartOf="@+id/lbValue2"
-        app:layout_constraintStart_toEndOf="@+id/lbValue1"
-        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/lbValue2"
@@ -52,25 +40,51 @@
         app:layout_constraintEnd_toStartOf="@+id/lbEqual"
         app:layout_constraintStart_toEndOf="@+id/lbOp" />
 
+    <EditText
+        android:id="@+id/tbInput"
+        android:layout_width="0dp"
+        android:layout_height="47dp"
+        android:layout_marginTop="201dp"
+        android:layout_marginEnd="48dp"
+        android:ems="10"
+        android:inputType="text"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/lbEqual"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <TextView
         android:id="@+id/lbEqual"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
         android:layout_marginEnd="47dp"
         android:text="="
         android:textSize="16sp"
-        app:layout_constraintBottom_toBottomOf="@+id/lbOp"
         app:layout_constraintEnd_toStartOf="@+id/tbInput"
-        app:layout_constraintStart_toEndOf="@+id/lbValue2" />
+        app:layout_constraintStart_toEndOf="@+id/lbValue2"
+        app:layout_constraintTop_toTopOf="@+id/tbInput" />
 
-    <EditText
-        android:id="@+id/tbInput"
-        android:layout_width="0dp"
-        android:layout_height="35dp"
-        android:layout_marginEnd="82dp"
-        android:ems="10"
-        android:inputType="number"
-        app:layout_constraintBaseline_toBaselineOf="@+id/lbEqual"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/lbEqual" />
+    <TextView
+        android:id="@+id/lbOp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="45dp"
+        android:layout_marginBottom="1dp"
+        android:text="+?"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/lbValue2"
+        app:layout_constraintEnd_toStartOf="@+id/lbValue2"
+        app:layout_constraintStart_toEndOf="@+id/lbValue1" />
+
+    <Button
+        android:id="@+id/btCheck"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="139dp"
+        android:layout_marginTop="412dp"
+        android:text="Check"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
