@@ -10,96 +10,67 @@
         android:id="@+id/lbPlayerName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="63dp"
         android:text="Name"
-        android:textSize="34sp"
-        tools:layout_editor_absoluteX="18dp"
-        tools:layout_editor_absoluteY="40dp" />
-
-    <Button
-        android:id="@+id/button3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Check"
-        tools:layout_editor_absoluteX="145dp"
-        tools:layout_editor_absoluteY="515dp" />
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/tbValue1"
+        android:id="@+id/lbValue1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="TextView"
-        tools:layout_editor_absoluteX="18dp"
-        tools:layout_editor_absoluteY="354dp" />
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="33dp"
+        android:text="v1"
+        android:textSize="20sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/lbOp"
+        app:layout_constraintEnd_toStartOf="@+id/lbOp"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
-        android:id="@+id/tvOp"
+        android:id="@+id/lbOp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="TextView"
-        tools:layout_editor_absoluteX="105dp"
-        tools:layout_editor_absoluteY="354dp" />
+        android:layout_marginTop="187dp"
+        android:layout_marginEnd="45dp"
+        android:text="+?"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toStartOf="@+id/lbValue2"
+        app:layout_constraintStart_toEndOf="@+id/lbValue1"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/tbValue2"
+        android:id="@+id/lbValue2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="TextView"
-        tools:layout_editor_absoluteX="190dp"
-        tools:layout_editor_absoluteY="354dp" />
+        android:layout_marginEnd="40dp"
+        android:text="v2"
+        android:textSize="20sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/lbEqual"
+        app:layout_constraintEnd_toStartOf="@+id/lbEqual"
+        app:layout_constraintStart_toEndOf="@+id/lbOp" />
+
+    <TextView
+        android:id="@+id/lbEqual"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="47dp"
+        android:text="="
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/lbOp"
+        app:layout_constraintEnd_toStartOf="@+id/tbInput"
+        app:layout_constraintStart_toEndOf="@+id/lbValue2" />
 
     <EditText
-        android:id="@+id/editTextNumber"
-        android:layout_width="50dp"
-        android:layout_height="49dp"
+        android:id="@+id/tbInput"
+        android:layout_width="0dp"
+        android:layout_height="35dp"
+        android:layout_marginEnd="82dp"
         android:ems="10"
         android:inputType="number"
-        tools:layout_editor_absoluteX="346dp"
-        tools:layout_editor_absoluteY="324dp" />
-
-    <TextView
-        android:id="@+id/textView6"
-        android:layout_width="50dp"
-        android:layout_height="19dp"
-        android:text="="
-        tools:layout_editor_absoluteX="269dp"
-        tools:layout_editor_absoluteY="354dp" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_begin="20dp" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_begin="20dp" />
-
-    <androidx.constraintlayout.helper.widget.Layer
-        android:id="@+id/layer"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
-
-    <androidx.constraintlayout.helper.widget.Layer
-        android:id="@+id/layer2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_begin="20dp" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_begin="20dp" />
-
+        app:layout_constraintBaseline_toBaselineOf="@+id/lbEqual"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/lbEqual" />
 </androidx.constraintlayout.widget.ConstraintLayout>

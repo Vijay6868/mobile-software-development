@@ -48,7 +48,7 @@ public class MainActivity extends AppCompatActivity {
         dropdown.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                Toast.makeText(MainActivity.this, items.get(position), Toast.LENGTH_SHORT).show();
+                //Toast.makeText(MainActivity.this, items.get(position), Toast.LENGTH_SHORT).show();
                 selectedItem = items.get(position);
             }
 
