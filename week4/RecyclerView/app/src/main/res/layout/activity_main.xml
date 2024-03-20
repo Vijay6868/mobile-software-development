@@ -7,4 +7,5 @@
     tools:context=".MainActivity"
     android:id="@+id/rv">
 
+
 </androidx.recyclerview.widget.RecyclerView>
