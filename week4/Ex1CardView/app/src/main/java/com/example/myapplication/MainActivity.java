@@ -15,11 +15,12 @@ RecyclerView recyclerView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
 
         ArrayList<CardItems> items = new ArrayList<>();
-        items.add(new CardItems("/Users/vj/Documents/Developer/mobile-software-development/week4/Ex1CardView/app/src/main/res/drawable/img1.jpg","image1"));
-        items.add(new CardItems("/Users/vj/Documents/Developer/mobile-software-development/week4/Ex1CardView/app/src/main/res/drawable/img2.jpg","image2"));
-        items.add(new CardItems("/Users/vj/Documents/Developer/mobile-software-development/week4/Ex1CardView/app/src/main/res/drawable/img3.jpg","image3"));
+        items.add(new CardItems(R.drawable.img1,"image1"));
+        items.add(new CardItems(R.drawable.img2,"image2"));
+        items.add(new CardItems(R.drawable.img3,"image3"));
 
         recyclerView = findViewById(R.id.rv);
         RVAdapter adapter = new RVAdapter(items);

@@ -29,18 +29,10 @@ public class RVAdapter extends RecyclerView.Adapter<RVHolder>{
     @Override
     public void onBindViewHolder(@NonNull RVHolder holder, int position) {
         CardItems currentItem = cardItems.get(position);
-        String t_title = currentItem.getText_item();
-        holder.title.setText(t_title);
-        String path = currentItem.getImgUrl();
-        File imgFile = new File(path);
-
-        if(imgFile.exists()){
-            Bitmap bitmap = BitmapFactory.decodeFile(imgFile.getAbsolutePath()); // Decode the file path string to a Bitmap
-            holder.imageView.setImageBitmap(bitmap); // Set the Bitmap to the ImageView
-        }
+       holder.imageView.setImageResource(currentItem.getImage());
+       holder.title.setText(currentItem.getText_item());
 
     }
-
     @Override
     public int getItemCount() {
         return cardItems.size();

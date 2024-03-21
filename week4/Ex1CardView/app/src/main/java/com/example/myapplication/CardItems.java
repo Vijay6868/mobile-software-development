@@ -5,21 +5,22 @@ import android.widget.TextView;
 
 public class CardItems {
 
-    String text_item;
+    private String text_item;
+    private int imageResource;
     String imgUrl;
 
     public String getText_item() {
         return text_item;
     }
 
-    public String getImgUrl() {
-        return imgUrl;
+    public int getImage() {
+        return imageResource;
     }
 
-    public CardItems(String imgUrl, String text_item) {
+    public CardItems(int imageResource, String text_item) {
 
+        this.imageResource = imageResource;
         this.text_item = text_item;
-        this.imgUrl = imgUrl;
 
     }
 }

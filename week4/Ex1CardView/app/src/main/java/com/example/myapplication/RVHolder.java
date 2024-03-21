@@ -15,7 +15,7 @@ public class RVHolder extends RecyclerView.ViewHolder {
     public RVHolder(@NonNull View itemView) {
         super(itemView);
         title = itemView.findViewById(R.id.title);
-        imageView = itemView.findViewById(R.id.Item_image);
+        imageView = itemView.findViewById(R.id.image);
         cardLayout = itemView.findViewById(R.id.carLayout);
     }
 }
