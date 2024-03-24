@@ -22,6 +22,7 @@ RecyclerView recyclerView;
         countries.add( new Country(R.drawable.germany,"GERMANY"));
         countries.add( new Country(R.drawable.norway,"NORWAY"));
 
+        recyclerView = findViewById(R.id.rv);
         RVAdapter adapter = new RVAdapter(countries);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         recyclerView.setAdapter(adapter);
