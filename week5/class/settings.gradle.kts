@@ -13,7 +13,6 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "ExCardView"
-include(":app")
+rootProject.name = "DBdemo"
 include(":app")
  
