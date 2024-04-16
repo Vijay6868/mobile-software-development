@@ -20,9 +20,9 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         ArrayList<SlideModel> imageList = new ArrayList<>();
-        imageList.add(new SlideModel("https://bit.ly/2YoJ77H", "The animal population decreased by 58 percent in 42 years.", ScaleTypes.CENTER_CROP));
-        imageList.add(new SlideModel("https://bit.ly/2BteuF2", "Elephants and tigers may become extinct.", ScaleTypes.CENTER_CROP));
-        imageList.add(new SlideModel("https://bit.ly/3fLJf72", "And people do that.",ScaleTypes.CENTER_CROP));
+        imageList.add(new SlideModel(R.drawable.img1, ScaleTypes.CENTER_CROP));
+        imageList.add(new SlideModel(R.drawable.img2, ScaleTypes.CENTER_CROP));
+        imageList.add(new SlideModel(R.drawable.img3,ScaleTypes.CENTER_CROP));
         ArrayList<SlideModel> list1 = new ArrayList<>();
 
 
