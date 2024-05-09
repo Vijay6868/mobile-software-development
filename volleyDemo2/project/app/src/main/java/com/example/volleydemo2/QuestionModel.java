@@ -3,8 +3,6 @@ package com.example.volleydemo2;
 
 import org.json.JSONArray;
 
-import java.util.ArrayList;
-
 /*      {
               "type": "multiple",
               "difficulty": "medium",
@@ -17,7 +15,7 @@ import java.util.ArrayList;
               "Physics"
               ]
               },*/
-public class UserModel {
+public class QuestionModel {
 
     String type;
     String difficulty;
@@ -26,7 +24,7 @@ public class UserModel {
     String correct_answer;
     JSONArray incorrect_answers;
 
-    public UserModel(String type, String difficulty, String category, String question, String correct_answer, JSONArray incorrect_answers) {
+    public QuestionModel(String type, String difficulty, String category, String question, String correct_answer, JSONArray incorrect_answers) {
         this.type = type;
         this.difficulty = difficulty;
         this.category = category;

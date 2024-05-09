@@ -30,19 +30,19 @@ import org.json.JSONObject;
               ]
               },*/
 
-public class UserModelControllerAPI {
-    private UserModelList list;
-    private UserModel singleModel;
+public class QuestionModelControllerAPI {
+    private QuestionsModelList list;
+    private QuestionModel singleModel;
     private DataCallback callback;
     private String url = "https://opentdb.com/api.php?amount=10&category=9&difficulty=medium&type=boolean";
 
             //"https://opentdb.com/api.php?amount=10&category=9&difficulty=medium";
     private Context context;
 
-    public UserModelControllerAPI(Context context, DataCallback callback) {
+    public QuestionModelControllerAPI(Context context, DataCallback callback) {
         this.context = context;
         this.callback = callback;
-        list = new UserModelList();
+        list = new QuestionsModelList();
     }
 
     public void getData() {
@@ -60,7 +60,7 @@ public class UserModelControllerAPI {
                             JSONArray resultsArray = jsonResponse.getJSONArray("results");
                             for (int i = 0; i < resultsArray.length(); i++) {
                                 JSONObject singleObject = resultsArray.getJSONObject(i);
-                                singleModel = new UserModel(
+                                singleModel = new QuestionModel(
                                         singleObject.getString("type"),
                                         singleObject.getString("difficulty"),
                                         singleObject.getString("category"),

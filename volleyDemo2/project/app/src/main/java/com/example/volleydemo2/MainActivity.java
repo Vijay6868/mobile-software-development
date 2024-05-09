@@ -10,7 +10,7 @@ import org.json.JSONException;
 
 
 public class MainActivity extends AppCompatActivity implements DataCallback{
-    UserModelControllerAPI userModelControllerAPI;
+    QuestionModelControllerAPI userModelControllerAPI;
     TextView hw;
 
     @Override
@@ -19,12 +19,12 @@ public class MainActivity extends AppCompatActivity implements DataCallback{
         setContentView(R.layout.activity_main);
 
         hw = findViewById(R.id.hw);
-       userModelControllerAPI = new UserModelControllerAPI(this,this);
+       userModelControllerAPI = new QuestionModelControllerAPI(this,this);
        userModelControllerAPI.getData();
         }
 
     @Override
-    public void onDataLoaded(UserModelList list) {
+    public void onDataLoaded(QuestionsModelList list) {
         String category = null;
         try {
             category = list.getUserModelList().get(0).getIncorrect_answers().get(0).toString();
