@@ -2,12 +2,15 @@ package com.example.volleydemo2;
 
 import java.util.ArrayList;
 
+import java.util.ArrayList;
+
 public class UserModelList {
     private ArrayList<UserModel> userModelList;
 
-    public UserModelList(ArrayList<UserModel> userModelList) {
-        this.userModelList = userModelList;
+    public UserModelList() {
+        this.userModelList = new ArrayList<>();
     }
+
     public void addUserModel(UserModel userModel) {
         userModelList.add(userModel);
     }
@@ -24,4 +27,6 @@ public class UserModelList {
         this.userModelList = userModelList;
     }
 }
+
+
 

@@ -14,8 +14,6 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import java.util.ArrayList;
-
 //https://opentdb.com/api.php?amount=10&category=9&difficulty=medium&type=multiple
 
 
@@ -33,15 +31,18 @@ import java.util.ArrayList;
               },*/
 
 public class UserModelControllerAPI {
+    private UserModelList list;
+    private UserModel singleModel;
+    private DataCallback callback;
+    private String url = "https://opentdb.com/api.php?amount=10&category=9&difficulty=medium&type=boolean";
 
-    UserModelList userModelList;
-    UserModel singleModel;
-    String url = "https://opentdb.com/api.php?amount=10&category=9&difficulty=medium&type=multiple";
-    Context context;
+            //"https://opentdb.com/api.php?amount=10&category=9&difficulty=medium";
+    private Context context;
 
-    public UserModelControllerAPI(Context context) {
+    public UserModelControllerAPI(Context context, DataCallback callback) {
         this.context = context;
-        userModelList = new UserModelList(new ArrayList<>());
+        this.callback = callback;
+        list = new UserModelList();
     }
 
     public void getData() {
@@ -67,17 +68,17 @@ public class UserModelControllerAPI {
                                         singleObject.getString("correct_answer"),
                                         singleObject.getJSONArray("incorrect_answers")
                                 );
-                                userModelList.addUserModel(singleModel); // Add the model to the list
+                                list.addUserModel(singleModel); // Add the model to the list
                             }
+                            callback.onDataLoaded(list); // Notify the callback
                         } catch (JSONException e) {
                             throw new RuntimeException(e);
                         }
-
                     }
                 }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
-                Log.e("api", "onErrorResponse: " + error.toString());
+                Log.e("api", "VolleyError: " + error.toString());
             }
         });
 
@@ -85,4 +86,5 @@ public class UserModelControllerAPI {
         queue.add(stringRequest);
     }
 }
+
 
